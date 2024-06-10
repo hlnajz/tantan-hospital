@@ -11,7 +11,7 @@
 //     const fetchMessages = async () => {
 //       try {
 //         const { data } = await axios.get(
-//           "http://localhost:4000/api/v1/message/getall",
+//           "https://tantan-hospital.onrender.com/api/v1/message/getall",
 //           { withCredentials: true }
 //         );
 //         setMessages(data.messages);
@@ -77,7 +77,7 @@
 //     const fetchMessages = async () => {
 //       try {
 //         const { data } = await axios.get(
-//           "http://localhost:4000/api/v1/message/getall",
+//           "https://tantan-hospital.onrender.com/api/v1/message/getall",
 //           { withCredentials: true }
 //         );
 //         setMessages(data.messages);
@@ -144,7 +144,7 @@ const Messages = () => {
     const fetchMessages = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/message/getall",
+          "https://tantan-hospital.onrender.com/api/v1/message/getall",
           { withCredentials: true }
         );
         setMessages(data.messages);
@@ -157,9 +157,12 @@ const Messages = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v1/message/delete/${id}`, {
-        withCredentials: true,
-      });
+      await axios.delete(
+        `https://tantan-hospital.onrender.com/api/v1/message/delete/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       setMessages(messages.filter((message) => message._id !== id));
       toast.success("تم حذف الرسالة بنجاح");
     } catch (error) {

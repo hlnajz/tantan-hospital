@@ -13,7 +13,7 @@
 //     const fetchAppointments = async () => {
 //       try {
 //         const { data } = await axios.get(
-//           "http://localhost:4000/api/v1/appointment/getall",
+//           "https://tantan-hospital.onrender.com/api/v1/appointment/getall",
 //           { withCredentials: true }
 //         );
 //         setAppointments(data.appointments);
@@ -27,7 +27,7 @@
 //   const handleUpdateStatus = async (appointmentId, status) => {
 //     try {
 //       const { data } = await axios.put(
-//         `http://localhost:4000/api/v1/appointment/update/${appointmentId}`,
+//         `https://tantan-hospital.onrender.com/api/v1/appointment/update/${appointmentId}`,
 //         { status },
 //         { withCredentials: true }
 //       );
@@ -208,7 +208,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/appointment/getall",
+          "https://tantan-hospital.onrender.com/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -224,7 +224,7 @@ const Dashboard = () => {
   const handleDeleteAppointment = async (appointmentId) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/v1/appointment/delete/${appointmentId}`,
+        `https://tantan-hospital.onrender.com/api/v1/appointment/delete/${appointmentId}`,
         { withCredentials: true }
       );
       setAppointments((prevAppointments) =>
@@ -241,7 +241,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/appointment/update/${appointmentId}`,
+        `https://tantan-hospital.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );
